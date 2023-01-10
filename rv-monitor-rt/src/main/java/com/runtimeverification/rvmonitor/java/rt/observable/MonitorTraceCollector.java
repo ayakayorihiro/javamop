@@ -97,14 +97,14 @@ public class MonitorTraceCollector implements IInternalBehaviorObserver {
                         traceDB = new TraceDBH2Normalized(dbPath);
                         break;
                     default:
-                        traceDB = new TraceDBH2Normalized(dbPath);
+                        traceDB = new TraceDBH2(dbPath);
                 }
             }
         }
 
         // some problem occurred while reading from config; use the default
         if (traceDB == null) {
-            traceDB = new TraceDBH2Normalized(dbPath);
+            traceDB = new TraceDBH2(dbPath);
         }
 
         return traceDB;
