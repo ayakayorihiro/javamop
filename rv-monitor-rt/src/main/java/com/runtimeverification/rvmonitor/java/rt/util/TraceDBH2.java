@@ -64,7 +64,7 @@ public class TraceDBH2 extends TraceDB{
 
     public void dump() {
         System.out.println(getDbDir() + "::::traces");
-        super.dump(getDbDir()+ File.pathSeparator + "trace-table.csv", "traces");
+        super.dump(getDbDir()+ File.pathSeparator + "monitor-table.csv", "traces");
     }
 
     public void createTable() {
